@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
 import { TabmenuPage } from '../pages/tabmenu/tabmenu';
+import { DetailPostingPage } from '../pages/detail-posting/detail-posting';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TabmenuPage } from '../pages/tabmenu/tabmenu';
     RegisterPage,
     LoginPage,
     TabmenuPage,
+    DetailPostingPage,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { TabmenuPage } from '../pages/tabmenu/tabmenu';
     HomePage,
     RegisterPage,
     LoginPage,
-    TabmenuPage
+    TabmenuPage,
+    DetailPostingPage,
   ],
   providers: [
     StatusBar,
