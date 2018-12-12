@@ -22,4 +22,12 @@ export class PostingPage {
     console.log('ionViewDidLoad PostingPage');
   }
 
+  ok(){
+
+  }
+
+  cancel(){
+    
+  }
+
 }
