@@ -8,18 +8,18 @@
 
 <!-- Looping -->
 <ion-content padding>
-  <ion-card item-start (click)="detail_posting()">
+  <ion-card item-start (click)="detail_posting()" *ngFor="let dt of datareview.review">
       <ion-item>
         <ion-avatar item-start>
           <img src="assets/imgs/DV-min.jpg">
         </ion-avatar>
-        <h2>Nama pengguna</h2>
-        <p>short about my self</p>
+        <h2>{{dt.nama}}</h2>
+        <p>{{dt.tentang_saya}}</p>
       </ion-item>
     
       <ion-row>
           <ion-col col-9 push-3>
-              <p>Di sini tempat untuk tulisan review dari user. Di sini tempat untuk tulisan review dari user. Di sini tempat untuk tulisan review dari user. Di sini tempat untuk tulisan review dari user.</p>            
+              <p>{{dt.isi_review}}</p>            
           </ion-col>
           <ion-col col-3 pull-9>
               <img class = "fotobuku" src="assets/imgs/Yuhuu.png">
@@ -47,7 +47,7 @@
       </ion-row>
     </ion-card>
 
-    <ion-card item-start (click)="detail_posting()">
+    <!-- <ion-card item-start (click)="detail_posting()">
       <ion-item>
         <ion-avatar item-start>
           <img src="assets/imgs/DV-min.jpg">
@@ -84,7 +84,7 @@
           </ion-note>
         </ion-col>
       </ion-row>
-    </ion-card>
+    </ion-card> -->
 <!-- end looping -->
 
     <ion-fab bottom right item-start (click)="postingan()">

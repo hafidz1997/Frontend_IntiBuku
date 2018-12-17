@@ -6,35 +6,44 @@ import { PostingPage } from '../posting/posting';
 import { HttpHeaders, HttpClient} from '@angular/common/http'
 import { Data } from '../../provider/data';
 
-
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,public httpClient: HttpClient, public data : Data) {
+  id: string;
+  datareview: any = [];
+  coba: any;
+  dt:any = [];
 
-    const httpOptions = {
+  constructor(public data: Data, public nav: NavController, public httpClient: HttpClient) {
+    this.data.getData().then((data)=>
+    {
+  
+      const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
+        'Content-Type':  'application/json',
         'Authorization': 'Bearer '+data.api_token
-      })
-    };
-
-    this.httpClient.get(this.data.BASE_URL+'/getReview'+ data, httpOptions).subscribe(data =>{
-      let response = data;
-      console.log(response);
-    });
+        })
+      };
+  
+      this.httpClient.get(this.data.BASE_URL+'/getReview', httpOptions).subscribe(data =>{
+       let response = data;
+       this.datareview = response;
+       console.log(this.datareview);
+  
+      });
+  
+    })
   }
 
   detail_posting(){
-    this.navCtrl.push(DetailPostingPage)
+    this.nav.push(DetailPostingPage)
   }
 
   postingan(){
-    this.navCtrl.push(PostingPage)
+    this.nav.push(PostingPage)
   }
 
 }
