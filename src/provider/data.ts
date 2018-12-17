@@ -15,4 +15,10 @@ export class Data{
         this.storage.set('data_user', data_user);
         this.storage.set('api_token', api_token);
     }
+
+    getData(){
+        return this.storage.get('data_user').then( (val) => {
+          return val;
+        });
+      }
 }
