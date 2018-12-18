@@ -16,6 +16,10 @@ import { LoginPage } from '../pages/login/login';
 import { TabmenuPage } from '../pages/tabmenu/tabmenu';
 import { DetailPostingPage } from '../pages/detail-posting/detail-posting';
 import { PostingPage } from '../pages/posting/posting';
+import { EventPage } from '../pages/event/event';
+import { ProfilPage } from '../pages/profil/profil';
+import { DetailEventPage } from '../pages/detail-event/detail-event';
+import { CreateEventPage } from '../pages/create-event/create-event';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { PostingPage } from '../pages/posting/posting';
     TabmenuPage,
     DetailPostingPage,
     PostingPage,
+    EventPage,
+    ProfilPage,
+    DetailEventPage,
+    CreateEventPage,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +51,10 @@ import { PostingPage } from '../pages/posting/posting';
     TabmenuPage,
     DetailPostingPage,
     PostingPage,
+    EventPage,
+    ProfilPage,
+    DetailEventPage,
+    CreateEventPage,
   ],
   providers: [
     StatusBar,

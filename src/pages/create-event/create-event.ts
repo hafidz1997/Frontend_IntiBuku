@@ -2,24 +2,16 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-posting',
-  templateUrl: 'posting.html',
+  selector: 'page-create-event',
+  templateUrl: 'create-event.html',
 })
-export class PostingPage {
+export class CreateEventPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PostingPage');
-  }
-
-  ok(){
-
-  }
-
-  cancel(){
-    
+    console.log('ionViewDidLoad CreateEventPage');
   }
 
 }
