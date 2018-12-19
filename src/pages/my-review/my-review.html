@@ -1,0 +1,58 @@
+<!--
+  Generated template for the MyReviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="birumuda">
+    <ion-title>My Book Review</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!-- Looping -->
+<ion-content padding>
+    <ion-card item-start (click)="detail_posting()" >
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/DV-min.jpg">
+          </ion-avatar>
+          <h2>Arga</h2>
+          <p>Tampan</p>
+        </ion-item>
+      
+        <ion-row>
+            <ion-col col-8 push-4>
+                <p>Buku ini mantap</p>            
+            </ion-col>
+            <ion-col col-4 pull-8>
+                <img class = "fotobuku" src="assets/imgs/Yuhuu.jpg">
+            </ion-col>
+        </ion-row>
+          
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    <!-- end looping -->
+</ion-content>

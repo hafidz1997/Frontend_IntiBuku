@@ -18,4 +18,41 @@
       <div class="card-title" text-center>Devy Apriansyah</div>
       <div class="card-subtitle" text-center>@devyapriansyah</div>
 
+      <ion-list no-border>
+          <ion-list-header>
+              MY POSTS
+            </ion-list-header>
+        
+            <ion-item (click)="my_review()">
+              <ion-icon name='book' item-start></ion-icon>
+              My Book Reviews
+        
+            </ion-item>
+
+    <ion-list-header>
+      PROFILE SETTINGS
+    </ion-list-header>
+
+    <ion-item (click)="doPrompt()">
+      <ion-icon name='mail' item-start></ion-icon>
+      Change Email Address
+
+    </ion-item>
+
+    <ion-item (click)="doPromptPass()">
+        <ion-icon name='key' item-start></ion-icon>
+        Change Password
+        </ion-item>
+
+    <ion-item (click)="logout()">
+      <ion-icon name='log-out' item-start></ion-icon>
+      Logout
+       </ion-item>
+
+
+
+
+
+  </ion-list>
+
 </ion-content>
