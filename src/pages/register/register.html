@@ -54,7 +54,12 @@
       </ion-item>
     </form>
 
-    Sudah punya akun?<p text-right ion-text color="putih" tappable (click)="login()"><strong>Login</strong></p>
+    <ion-item>
+      <div class="row">
+        <div class="column"><p>Sudah punya akun?</p></div>
+        <div class="column"><p text-right ion-text color="putih" tappable (click)="login()"><strong>Login</strong></p></div>
+      </div>
+    </ion-item>
 
     <div>
       <button ion-button icon-start block class="btn-signin" tappable (click)="daftar()">
