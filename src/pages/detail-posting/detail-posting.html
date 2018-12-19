@@ -61,17 +61,19 @@
       
         <ion-list>
 
-            <ion-list-header>COMMENTS</ion-list-header>
-            <ion-grid>
+            <!-- <ion-list-header >COMMENTS</ion-list-header> -->
+            <ion-grid no-padding>
               <ion-row>
                 <ion-col col-10>
-                  <ion-textarea type="text" placeholder="Type your comment..."></ion-textarea>
+                    <ion-item>
+                        <ion-textarea type="textarea" placeholder="Type your comment..."></ion-textarea>
+                      </ion-item>
                 </ion-col>
                 <ion-col col-2>
                     <!-- Only icon (no text) -->
-                    <button ion-button icon-only>
-                       <ion-icon name="home"></ion-icon>
-                    </button>
+                    <button ion-button color="birumuda" clear icon-only class="penuh">
+                        <ion-icon name='arrow-dropright-circle' is-active="false"></ion-icon>
+                      </button>
                 </ion-col>
               </ion-row>
             </ion-grid>
@@ -93,7 +95,7 @@
               <ion-note item-end>Fri</ion-note>
             </ion-item>
         
-
+<!-- 
         
-          </ion-list>
-</ion-content>
+          </ion-list> -->
+<!-- </ion-content> -->

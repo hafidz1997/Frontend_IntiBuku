@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { MyReviewPage } from '../my-review/my-review';
+import { Data } from '../../provider/data';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -10,8 +12,15 @@ import { MyReviewPage } from '../my-review/my-review';
 })
 export class ProfilPage {
 
-  constructor(public alertCtrl: AlertController, public nav: NavController, navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController, public nav: NavController, navCtrl: NavController, public navParams: NavParams, private data : Data) {
   }
+
+  logout(){
+    this.data.logout();
+    this.nav.setRoot(LoginPage);
+  }
+
+
   doPrompt() {
     let prompt = this.alertCtrl.create({
       title: 'Change Email Address',
@@ -43,6 +52,7 @@ export class ProfilPage {
     });
     prompt.present();
   }
+  
 
   doPromptPass() {
     let prompt = this.alertCtrl.create({
