@@ -20,6 +20,7 @@ import { EventPage } from '../pages/event/event';
 import { ProfilPage } from '../pages/profil/profil';
 import { DetailEventPage } from '../pages/detail-event/detail-event';
 import { CreateEventPage } from '../pages/create-event/create-event';
+import { MyReviewPage } from '../pages/my-review/my-review';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CreateEventPage } from '../pages/create-event/create-event';
     ProfilPage,
     DetailEventPage,
     CreateEventPage,
+    MyReviewPage,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { CreateEventPage } from '../pages/create-event/create-event';
     ProfilPage,
     DetailEventPage,
     CreateEventPage,
+    MyReviewPage,
   ],
   providers: [
     StatusBar,
