@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="birumuda">
     <ion-title>Event</ion-title>
   </ion-navbar>
 
@@ -14,17 +14,19 @@
 
 <!-- Looping -->
 <ion-content padding>
-  <ion-card item-start (click)="detail_event()" *ngFor="let dt of datareview.review">
+  <ion-card item-start (click)="detail_event()">
       <ion-item>
         <h2>Judul/Nama Event</h2>
       </ion-item>
     
       <ion-row>
           <ion-col col-9 push-3>
-              <p>{{dt.isi_review}}</p>            
+              <p class="maxline">Ini isi review loh. Ini isi review loh. Ini isi review loh. Ini isi review loh.
+                 Ini isi review loh. Ini isi review loh. Ini isi review loh. Ini isi review loh.
+              </p>            
           </ion-col>
           <ion-col col-3 pull-9>
-              <img class = "fotobuku" src="assets/imgs/Yuhuu.png">
+              <img class = "fotobuku" src="assets/imgs/Yuhuu.jpg">
           </ion-col>
       </ion-row>
         

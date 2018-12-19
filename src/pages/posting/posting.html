@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="birumuda">
     <ion-title>Posting</ion-title>
   </ion-navbar>
 
@@ -16,12 +16,17 @@
 <ion-content padding>
 
     <ion-list>
-        
+      
+          <ion-item>
+              <ion-label floating>Judul Review</ion-label>
+              <ion-input type="text"></ion-input>
+          </ion-item>
+
           <ion-item>
             <ion-label floating>Judul Buku</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
-
+          
           <ion-item>
               <ion-label floating>Penulis</ion-label>
               <ion-input type="text"></ion-input>
@@ -44,8 +49,8 @@
     </ion-list>
 
     <ion-fab bottom right>
-        <button ion-button clear item-start (click)="ok()">OK</button>
       <button ion-button color="danger" clear item-start (click)="cancel()">CANCEL</button>
+      <button ion-button clear item-start (click)="ok()">OK</button>
     </ion-fab>
 
 </ion-content>
