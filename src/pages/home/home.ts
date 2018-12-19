@@ -44,8 +44,8 @@ export class HomePage {
     })
   }
 
-  detail_posting(){
-    this.nav.push(DetailPostingPage)
+  detail_posting(id_review : number){
+    this.nav.push(DetailPostingPage, {data:id_review})
   }
 
   postingan(){
