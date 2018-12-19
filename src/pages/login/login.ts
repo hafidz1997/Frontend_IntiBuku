@@ -31,8 +31,7 @@ export class LoginPage {
     public toastCtrl: ToastController,
     public httpClient: HttpClient,
     public loadCtrl: LoadingController,
-    private data : Data,
-    public client: HttpClient
+    private data : Data
 ) {
 
 

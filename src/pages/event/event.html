@@ -12,6 +12,47 @@
 
 </ion-header>
 
+<!-- Looping -->
+<ion-content padding>
+  <ion-card item-start (click)="detail_event()" *ngFor="let dt of datareview.review">
+      <ion-item>
+        <h2>Judul/Nama Event</h2>
+      </ion-item>
+    
+      <ion-row>
+          <ion-col col-9 push-3>
+              <p>{{dt.isi_review}}</p>            
+          </ion-col>
+          <ion-col col-3 pull-9>
+              <img class = "fotobuku" src="assets/imgs/Yuhuu.png">
+          </ion-col>
+      </ion-row>
+        
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-start clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  <!-- end looping -->
+
+  <ion-fab bottom right item-start (click)="create_event()">
+    <button ion-fab><ion-icon name="md-create"></ion-icon></button>
+</ion-fab>
 
 <ion-content padding>
 

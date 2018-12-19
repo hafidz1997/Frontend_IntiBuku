@@ -1,25 +1,27 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PostingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HomePage } from '../home/home';
 
-@IonicPage()
 @Component({
   selector: 'page-posting',
   templateUrl: 'posting.html',
 })
 export class PostingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public nav: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PostingPage');
+  }
+
+  ok(){
+    this.nav.setRoot(HomePage)
+  }
+
+  cancel(){
+    this.nav.pop()    
   }
 
 }

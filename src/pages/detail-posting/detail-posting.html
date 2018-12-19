@@ -7,12 +7,57 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>DetailPosting</ion-title>
+    <ion-title>Detail Posting</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+
+    <ion-card item-start>
+        <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/DV-min.jpg">
+            </ion-avatar>
+            <h2>{{dt.nama}}</h2>
+            <p>{{dt.tentang_saya}}</p>
+        </ion-item>
+        <ion-row>
+            <ion-col col-7 push-5>
+                <p>Penulis: ...<br>
+                   Penerbit: ...<br>
+                   Tebal: ... halaman<br>
+                </p>            
+            </ion-col>
+            <ion-col col-5 pull-7>
+                <img class = "fotobuku" src="assets/imgs/Yuhuu.jpg">
+            </ion-col>
+        </ion-row>
+         
+        <p>
+            Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review.
+            Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review.
+        </p>
+
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
 
 </ion-content>
