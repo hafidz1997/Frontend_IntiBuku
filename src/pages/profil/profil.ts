@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { MyReviewPage } from '../my-review/my-review';
+import { HttpHeaders, HttpClient} from '@angular/common/http'
 import { Data } from '../../provider/data';
 import { LoginPage } from '../login/login';
 
@@ -11,8 +12,35 @@ import { LoginPage } from '../login/login';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
+  id: string;
+  profil: any = [];
 
-  constructor(public alertCtrl: AlertController, public nav: NavController, navCtrl: NavController, public navParams: NavParams, private data : Data) {
+  constructor(public data: Data, public httpClient: HttpClient, public alertCtrl: AlertController, public nav: NavController, public navParams: NavParams) {
+    this.getData()
+  }
+
+  getData(){
+    this.data.getData().then((data)=>
+    {
+      this.id = data.id;
+      console.log(this.id);
+  
+      const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'Bearer '+data.api_token
+        })
+      };
+  
+
+      this.httpClient.get(this.data.BASE_URL+'/getProfil/' + data.id, httpOptions).subscribe(data =>{
+        let response = data;
+        this.profil = response;
+        console.log(this.profil);
+  
+      });
+  
+    })
   }
 
   logout(){

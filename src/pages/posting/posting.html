@@ -15,36 +15,38 @@
 
 <ion-content padding>
 
-    <ion-list>
+    <form>
           <ion-item>
               <ion-label floating>Judul Review</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" name="judul" [(ngModel)]="judul" ></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label floating>Judul Buku</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" name="judul2" [(ngModel)]="judul2" ></ion-input>
           </ion-item>
           
           <ion-item>
               <ion-label floating>Penulis</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" name="penulis" [(ngModel)]="penulis" ></ion-input>
           </ion-item>
           
           <ion-item>
               <ion-label floating>Review</ion-label>
-              <ion-textarea></ion-textarea>
+              <ion-textarea name="isi" [(ngModel)]="isi" ></ion-textarea>
           </ion-item>
 
           <ion-item>
               <ion-label floating>Detail Buku</ion-label>
-              <ion-textarea></ion-textarea>
+              <ion-textarea name="detail" [(ngModel)]="detail" ></ion-textarea>
           </ion-item>        
-    </ion-list>
+    
 
     <ion-fab bottom right>
       <button ion-button color="danger" clear item-start (click)="cancel()">CANCEL</button>
-      <button ion-button clear item-start (click)="ok()">OK</button>
+      <button ion-button clear item-start (click)="submit()">OK</button>
     </ion-fab>
+
+  </form>
 
 </ion-content>

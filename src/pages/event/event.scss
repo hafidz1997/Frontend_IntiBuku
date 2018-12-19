@@ -1,4 +1,8 @@
 page-event {
+    .judul{
+        font-family: Fontastique;
+    }
+
     .maxline{
         overflow: hidden;
         text-overflow: ellipsis;
@@ -6,5 +10,4 @@ page-event {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 5;
     }
-
 }

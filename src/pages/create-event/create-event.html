@@ -14,31 +14,32 @@
 
 
 <ion-content padding>
-    <ion-list>
+    <form>
         <ion-item>
             <ion-label floating>Nama Acara</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" name="nama" [(ngModel)]="nama"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Waktu</ion-label>
-            <ion-input type="date"></ion-input>
+            <ion-input type="date" name="waktu" [(ngModel)]="waktu"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Tempat</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" name="tempat" [(ngModel)]="tempat"></ion-input>
         </ion-item>
         
         <ion-item>
             <ion-label floating>Deskripsi Acara</ion-label>
-            <ion-textarea></ion-textarea>
+            <ion-textarea name="deskripsi" [(ngModel)]="deskripsi"></ion-textarea>
         </ion-item>
-  </ion-list>
 
   <ion-fab bottom right>
     <button ion-button color="danger" clear item-start (click)="cancel()">CANCEL</button>
-    <button ion-button clear item-start (click)="ok()">OK</button>
+    <button ion-button clear item-start (click)="submit()">OK</button>
   </ion-fab>
+
+</form>
 
 </ion-content>
