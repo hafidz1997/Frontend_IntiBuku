@@ -13,11 +13,16 @@ import { Data } from '../../provider/data';
 export class HomePage {
 
   id: string;
-  datareview: any = [];
+  datareview: any;
+  temporary: any;
   coba: any;
   dt:any = [];
 
   constructor(public data: Data, public nav: NavController, public httpClient: HttpClient) {
+   this.getData()
+  }
+
+  getData(){
     this.data.getData().then((data)=>
     {
   
@@ -31,6 +36,7 @@ export class HomePage {
       this.httpClient.get(this.data.BASE_URL+'/getReview', httpOptions).subscribe(data =>{
        let response = data;
        this.datareview = response;
+       this.datareview = this.datareview.review;
        console.log(this.datareview);
   
       });
@@ -44,6 +50,21 @@ export class HomePage {
 
   postingan(){
     this.nav.push(PostingPage)
+  }
+
+  getItems(query){
+    var query = query.target.value;
+    console.log(query)
+    if(query && query.trim() != ''){
+
+      this.datareview = this.datareview.filter((data) => {
+        // console.log(data)
+        return ((data.judul_buku.toLowerCase().indexOf(query.toLowerCase()) > -1))
+      })
+    }
+    else{
+      this.getData()
+    }
   }
 
 }
