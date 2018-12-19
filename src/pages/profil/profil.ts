@@ -43,6 +43,7 @@ export class ProfilPage {
     });
     prompt.present();
   }
+  
 
   doPromptPass() {
     let prompt = this.alertCtrl.create({
