@@ -11,8 +11,6 @@ import { HomePage } from '../home/home';
 })
 export class PostingPage {
 id: number;
-peneliti: any = [];
-
 judul: string;
 judul2: string;
 penulis: string;

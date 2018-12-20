@@ -19,14 +19,13 @@
             <ion-avatar item-start>
               <img src="assets/imgs/DV-min.jpg">
             </ion-avatar>
-            <h2>Arga</h2>
-            <p>Tampan</p>
+            <h2>{{detail?.review.nama}}</h2>
+            <p>{{detail?.review.tentang_saya}}</p>
         </ion-item>
         <ion-row>
             <ion-col col-7 push-5>
-                <p>Penulis: ...<br>
-                   Penerbit: ...<br>
-                   Tebal: ... halaman<br>
+                <h2>{{detail?.review.judul_buku}} : {{detail?.review.judul_review}}</h2>
+                <p>{{detail?.review.detail_buku}}
                 </p>            
             </ion-col>
             <ion-col col-5 pull-7>
@@ -35,8 +34,7 @@
         </ion-row>
          
         <p>
-            Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review.
-            Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review. Ini isi review.
+            {{detail?.review.isi_review}}
         </p>
 
         <ion-row>

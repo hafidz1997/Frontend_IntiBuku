@@ -11,8 +11,7 @@ import { Data } from '../../provider/data';
 export class DetailPostingPage {
   id_review: number;
   id_user: number;
-  detailreview: any;
-  kegiatan: any;
+  detail: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public data: Data, public httpClient: HttpClient) {
     this.id_review = navParams.get('data');
@@ -32,8 +31,8 @@ export class DetailPostingPage {
 
       this.httpClient.get(this.data.BASE_URL+'/detailReview/'+this.id_review, httpOptions).subscribe(data =>{
        let response = data;
-       this.detailreview = response;
-       console.log(this.detailreview);
+       this.detail = response;
+       console.log(this.detail);
 
       });
 

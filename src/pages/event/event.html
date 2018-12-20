@@ -7,7 +7,7 @@
 </ion-header>
 <!-- Looping -->
 <ion-content padding>
-  <ion-card item-start (click)="detail_event()" *ngFor="let dt of dataevent.event">
+  <ion-card item-start (click)="detail_event(dt.id_event)" *ngFor="let dt of dataevent.event">
     
       <ion-row>
           <ion-col col-9 push-3>

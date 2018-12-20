@@ -45,8 +45,8 @@ export class EventPage {
     console.log('ionViewDidLoad EventPage');
   }
 
-  detail_event(){
-    this.nav.push(DetailEventPage);
+  detail_event(id_event : number){
+    this.nav.push(DetailEventPage, {data:id_event});
   }
 
   create_event(){
