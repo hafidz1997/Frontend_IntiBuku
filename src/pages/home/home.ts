@@ -6,6 +6,15 @@ import { PostingPage } from '../posting/posting';
 import { HttpHeaders, HttpClient} from '@angular/common/http'
 import { Data } from '../../provider/data';
 
+//for reverse
+import { Pipe, PipeTransform } from '@angular/core';
+@Pipe({ name: 'reverse' })
+export class ReversePipe implements PipeTransform {
+  transform(value) {
+    return value.slice().reverse();
+  }
+}
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
