@@ -74,22 +74,13 @@
                 </ion-col>
               </ion-row>
             </ion-grid>
-            <ion-item>
+            <ion-item *ngFor="let komens of komen?.komentar">
               <ion-avatar item-start>
                 <img src="assets/imgs/ARGA.jpeg">
               </ion-avatar>
-              <h2>Barbie</h2>
-              <p>So, who's ready for Ken's dream tour?</p>
+              <h2>{{komens.nama}}</h2>
+              <p>{{komens.isi_komentar}}</p>
               <ion-note item-end>Sun</ion-note>
-            </ion-item>
-        
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/nim_190110150023.png">
-              </ion-avatar>
-              <h2>Squeeze</h2>
-              <p>The claw is our master.</p>
-              <ion-note item-end>Fri</ion-note>
             </ion-item>
         
 <!-- 

@@ -12,6 +12,7 @@ export class DetailPostingPage {
   id_review: number;
   id_user: number;
   detail: any;
+  komen: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public data: Data, public httpClient: HttpClient) {
     this.id_review = navParams.get('data');
@@ -35,6 +36,13 @@ export class DetailPostingPage {
        console.log(this.detail);
 
       });
+
+      this.httpClient.get(this.data.BASE_URL+'/getKomentar/'+this.id_review, httpOptions).subscribe(data =>{
+        let response = data;
+        this.komen = response;
+        console.log(this.komen);
+ 
+       });
 
     })
   }
